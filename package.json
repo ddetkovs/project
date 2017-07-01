@@ -1,0 +1,23 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {},
+  "devDependencies": {
+    "apollo-codegen": "^0.13.2",
+    "concurrently": "^3.4.0",
+    "eslint": "^4.1.1",
+    "eslint-plugin-graphql": "^1.0.0",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "start-lambda": "cd lambda && yarn run build-start-watch",
+    "start-client": "cd client && yarn start",
+    "introspect-schema": "apollo-codegen introspect-schema http://localhost:4000/graphql --output ./client/schema.json",
+    "generate-typings": "apollo-codegen generate ./client/src/**/*.graphql --schema ./client/schema.json --target typescript --output ./client/src/graphql/queries/schema.ts",
+    "introspect-and-generate": "yarn run introspect-schema && yarn run generate-typings",
+    "storybook": "concurrently \"yarn run start-lambda\" \"cd client && yarn run storybook\""
+  },
+  "author": "",
+  "license": "ISC"
+}

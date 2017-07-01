@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "command": "npm",
+  "isShellCommand": true,
+  "showOutput": "always",
+  "suppressTaskName": true,
+  "tasks": [
+    {
+      "taskName": "debug",
+      "args": [
+        "run",
+        "debug"
+      ]
+    },
+    {
+      "taskName": "start-watch",
+      "args": [
+        "run",
+        "start-watch"
+      ]
+    },
+    {
+      "taskName": "build-watch",
+      "args": [
+        "run",
+        "build-watch"
+      ],
+      "isBuildCommand": true,
+      "isBackground": true
+    }
+  ]
+}

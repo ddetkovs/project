@@ -1,0 +1,35 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.79.0",
+    "graphql": "^0.10.3",
+    "graphql-server-lambda": "^1.0.0",
+    "graphql-tools": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^0.0.14",
+    "@types/faker": "^4.1.0",
+    "@types/node": "^8.0.6",
+    "@types/webpack": "^3.0.1",
+    "awesome-typescript-loader": "^3.2.1",
+    "concurrently": "^3.5.0",
+    "faker": "^4.1.0",
+    "graphql-tag": "^2.4.2",
+    "nodemon": "^1.11.0",
+    "serverless": "^1.16.1",
+    "serverless-offline": "^3.14.2",
+    "typescript": "^2.4.1",
+    "typescript-eslint-parser": "^3.0.0",
+    "webpack": "^3.0.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "scripts": {
+    "start": "serverless offline",
+    "start-watch": "nodemon ./node_modules/serverless/bin/serverless offline",
+    "build-start": "webpack && npm start",
+    "build-start-watch": "concurrently \"webpack -w\" \"npm run-script start-watch\""
+  }
+}

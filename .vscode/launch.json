@@ -1,0 +1,30 @@
+{
+  // Use IntelliSense to learn about possible Node.js debug attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "protocol": "inspector",
+      "name": "Launch Program",
+      "program": "${workspaceRoot}/lambda/node_modules/serverless/bin/serverless",
+      "cwd": "${workspaceRoot}/lambda",
+      "args": [
+        "offline"
+      ],
+      "sourceMaps": true,
+      // "smartStep": true,
+      // "skipFiles": [
+      //   "node_modules/**"
+      // ],
+      "outFiles": [
+        "${workspaceRoot}/lambda/dist/handler.js"
+      ],
+      // "stopOnEntry": true,
+      // "port": 9229
+      // "localRoot": "${workspaceRoot}"
+    }
+  ]
+}

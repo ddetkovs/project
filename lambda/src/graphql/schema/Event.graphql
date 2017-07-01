@@ -1,0 +1,33 @@
+type Event {
+  id: ID!
+  organization: Organization!
+  description: String!
+  tagline: String!
+  rating: Float!
+  location: String!
+  thumbnail: String!
+  price: Float!
+  reviewCount: Int!
+}
+
+type OrganizationsEventsConnection {
+  pageInfo: PageInfo!
+  edges: [OrganizationsEventsEdge]!
+  totalCount: Int
+}
+
+type OrganizationsEventsEdge {
+  cursor: String!
+  node: Event!
+}
+
+type EventsConnection {
+  pageInfo: PageInfo!
+  edges: [EventsEdge]!
+  totalCount: Int
+}
+
+type EventsEdge {
+  cursor: String!
+  node: Event!
+}

@@ -1,0 +1,28 @@
+Actors:
+    goer
+    organization owner
+    organization admin
+    overseer
+
+As a user I want to be able to register/sign in with Facebook/Googleo
+As a user I want to be able to login with credentials/Facebook/Google
+
+As a goer I want to be able to view all organizations near someplace
+As a goer I want to be able to view all upcoming events near someplace
+As a goer I want to be able to view organization page
+As a goer I want to be able to view all upcoming organization events
+As a goer I want to be able to view event page
+As a goer I want to be able to view subscription options
+As a goer I want to be able to subscribe/buy single pass
+
+As an organization owner:
+As an organization owner I want to be able to create an organization
+As an organization owner I want to be able to view my organization
+As an organization owner I want to be able to edit my organization
+As an organization owner I want to be able to create events
+As an organization owner I want to be able to view all events
+As an organization owner I want to be able to edit events
+As an organization owner I want to be able to promote events
+
+As an overseer:
+As an overseer I want to be able to approve organizations

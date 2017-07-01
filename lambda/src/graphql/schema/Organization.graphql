@@ -1,0 +1,20 @@
+
+type Organization {
+    id: ID!
+    owner: User!
+    description: String
+    coverImage: String
+    events: [OrganizationsEventsConnection]!
+    # administrators: User[]
+}
+
+type OrganizationsEdge implements Edge {
+    node: Organization!
+    cursor: String!
+}
+
+type OrganizationsConnection implements Connection {
+    pageInfo: PageInfo!
+    edges: [OrganizationsEdge]!
+    totalCount: Int
+}

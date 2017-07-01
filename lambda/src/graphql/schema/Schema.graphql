@@ -1,0 +1,23 @@
+#import "./Organization.graphql"
+#import "./Event.graphql"
+#import "./Utils.graphql"
+
+type User {
+    id: ID!
+    name: String!
+}
+
+type OrganizationEvent {
+    Organization: Organization
+}
+
+type Query {
+    organization(id: ID!): Organization
+    organizations(first: Int, after: String): OrganizationsConnection
+    upcomingEvents(first: Int, after: String): EventsConnection
+}
+
+schema {
+    query: Query
+    # mutation: Mutation
+} 

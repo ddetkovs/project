@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es6"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": false,
+    "outDir": "dist"
+  },
+  "files": [
+    "src/handler.ts"
+  ],
+  // "include": [
+  //   "./src/**/*"
+  // ],
+  "exclude": [
+    "node_modules"
+  ]
+}
